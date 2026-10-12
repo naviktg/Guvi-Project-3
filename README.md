@@ -59,6 +59,28 @@ a custom landing page.
 - Security Group ID
 - IAM Role Name
 
-### Deployment Evidence
-Screenshots, successful GitHub Actions runs, and the
-final application URL will be added after deployment.
+### Deployment Results
+
+- Deployment Status: Successful
+- AWS Region: ap-south-1 (Mumbai)
+- VPC CIDR: 10.0.0.0/16
+- EC2 Instance Type: t3.micro
+- Web Server: Nginx
+- Infrastructure as Code: Terraform
+- CI/CD: GitHub Actions with AWS OIDC
+- Remote State: Amazon S3 with native state locking
+
+### Application URL
+
+http://13.205.240.3
+
+### Verification Evidence
+
+- GitHub Actions Plan and Apply jobs completed successfully.
+- EC2 instance is running with an Elastic IP.
+- Application website was opened and verified in a browser.
+- VPC, public subnets, Internet Gateway and routes were verified.
+- Security Group inbound and outbound rules were verified.
+- S3 versioning, encryption and public access protection were verified.
+- Terraform remote state object was verified in Amazon S3.
+- EC2 IAM role and trust relationship were verified.
